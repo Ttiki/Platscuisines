@@ -4,6 +4,8 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.fstyle.library.helper.AssetSQLiteOpenHelperFactory;
+
 import fr.uppa.platscuisines.MyApplication;
 import fr.uppa.platscuisines.MyApplication;
 import fr.uppa.platscuisines.models.Dish;
@@ -16,9 +18,13 @@ public abstract class SQLiteDB extends RoomDatabase {
             instance = Room.databaseBuilder(MyApplication.getAppContext(),
                     SQLiteDB.class,
                     "platscuisines.db")
+                    .openHelperFactory(new AssetSQLiteOpenHelperFactory())
                     .allowMainThreadQueries()
                     .build();
+
         }
         return instance;
     }
+
+    public abstract DishDAO getDishDao();
 }

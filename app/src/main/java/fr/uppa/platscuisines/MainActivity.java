@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import fr.uppa.platscuisines.db.SQLiteDB;
 import fr.uppa.platscuisines.models.Dish;
 import fr.uppa.platscuisines.models.DishBuilder;
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void handleOK(View view) {
+    /*public void handleOK(View view) {
         Intent intent = new Intent(this, DisplayDishActivity.class);
         EditText dishName = findViewById(R.id.dishName);
         SwitchCompat packof2 = findViewById(R.id.packof2);
@@ -60,5 +61,31 @@ public class MainActivity extends AppCompatActivity {
                 setConditionnePour12(packof12.isChecked() ? 1 : 0).createDish();
         intent.putExtra("dish", dish);
         startActivity(intent);
+    }*/
+
+    public void handleOK(View view)
+    {
+        Intent intent = new Intent(this, DisplayDishActivity.class);
+        EditText dishName = findViewById(R.id.dishName);
+        //Validate the input
+        if (dishName.getText().toString().isEmpty()) {
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Please, enter the Dish Name!", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+            toast.show();
+            return;
+        }
+        Dish dish = SQLiteDB.getInstance().getDishDao().
+                findByName(dishName.getText().toString());
+        if (dish == null) {
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Unknown Dish, Try again!", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+            toast.show();
+            return;
+        }
+        intent.putExtra("dish", dish);
+        startActivity(intent);
     }
+
 }

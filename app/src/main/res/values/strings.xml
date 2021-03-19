@@ -9,4 +9,5 @@
     <string name="ok">Ok</string>
     <string name="dish_info">Dish Information</string>
     <string name="pack_dispo">Pack Disponibility</string>
+    <string name="dish_name">Dish\'s name</string>
 </resources>
