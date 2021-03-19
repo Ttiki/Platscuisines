@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Platscuisines</string>
+    <string name="pack_2">Pack for 2</string>
+    <string name="pack_4">Pack for 4</string>
+    <string name="pack_8">Pack for 8</string>
+    <string name="pack_6">Pack for 6</string>
+    <string name="pack_10">Pack for 10</string>
+    <string name="pack_12">Pack for 12</string>
+    <string name="ok">Ok</string>
+    <string name="dish_info">Dish Information</string>
+    <string name="pack_dispo">Pack Disponibility</string>
+</resources>
