@@ -43,4 +43,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.github.daolq3012:AssetSQLiteOpenHelper:V1.0.1'
+    implementation 'com.google.dagger:dagger-android:2.33'
+    implementation 'com.google.dagger:dagger-android-support:2.33'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.33'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.33'
 }

@@ -1,6 +1,7 @@
 package fr.uppa.platscuisines.models;
 
 public class DishBuilder {
+
     private String nomPlat;
     private int conditionnePour2;
     private int conditionnePour4;

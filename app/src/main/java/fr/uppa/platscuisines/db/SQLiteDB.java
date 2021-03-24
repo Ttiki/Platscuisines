@@ -18,7 +18,7 @@ public abstract class SQLiteDB extends RoomDatabase {
             instance = Room.databaseBuilder(MyApplication.getAppContext(),
                     SQLiteDB.class,
                     "platscuisines.db")
-                    .openHelperFactory(new AssetSQLiteOpenHelperFactory())
+                    //.openHelperFactory(new AssetSQLiteOpenHelperFactory())
                     .allowMainThreadQueries()
                     .build();
 

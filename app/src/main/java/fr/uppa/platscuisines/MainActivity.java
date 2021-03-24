@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.List;
+
+import fr.uppa.platscuisines.db.DishDAO;
 import fr.uppa.platscuisines.db.SQLiteDB;
 import fr.uppa.platscuisines.models.Dish;
 import fr.uppa.platscuisines.models.DishBuilder;
@@ -22,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        DishDAO dishDao = SQLiteDB.getInstance().getDishDao();
+        Dish dish =new Dish("burger de remy",0,1,0,1,1);
+        //dishDao.insert(dish);
+        List<Dish> all = dishDao.getAll();
+        Log.i("myapplication","nb de plats dispos:" + all.size();
     }
 
     /*public void handleOK(View view) {

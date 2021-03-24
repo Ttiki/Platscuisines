@@ -8,6 +8,14 @@ import java.io.Serializable;
 
 @Entity(tableName = "platscuisines")
 public class Dish implements Serializable {
+    public int getIdPlat() {
+        return idPlat;
+    }
+
+    public void setIdPlat(int idPlat) {
+        this.idPlat = idPlat;
+    }
+
     @PrimaryKey
     private int idPlat;
     @ColumnInfo
