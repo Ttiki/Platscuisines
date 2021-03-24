@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Dish dish =new Dish("burger de remy",0,1,0,1,1);
         //dishDao.insert(dish);
         List<Dish> all = dishDao.getAll();
-        Log.i("myapplication","nb de plats dispos:" + all.size();
+        Log.i("myapplication","nb de plats dispos:" + all.size());
     }
 
     /*public void handleOK(View view) {
