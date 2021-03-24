@@ -6,8 +6,11 @@
     <string name="pack_6">Pack for 6</string>
     <string name="pack_10">Pack for 10</string>
     <string name="pack_12">Pack for 12</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="dish_info">Dish Information</string>
     <string name="pack_dispo">Pack Disponibility</string>
     <string name="dish_name">Dish\'s name</string>
+    <string name="add_dish">ADD</string>
+    <string name="more_info">MORE</string>
+    <string name="PackageSection">Package Presentations</string>
 </resources>

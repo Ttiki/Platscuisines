@@ -17,8 +17,8 @@ public interface DishDAO {
     List<Dish> getAll();
     @Query("SELECT * FROM platscuisines WHERE nomPlat LIKE '%' || :name || '%' LIMIT 1")
     Dish findByName(String name);
-    @Query("SELECT * FROM platscuisines WHERE idPlat=:idPlat")
-    Dish findById(String idPlat);
+    @Query("SELECT * FROM platscuisines WHERE idPlat=:id")
+    Dish findById(int id);
 
 
 }
