@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 import java.io.Serializable;
 
 @Entity(tableName = "platscuisines")
-public class Dish implements Serializable {
+public class  Dish implements Serializable {
     public int getIdPlat() {
         return idPlat;
     }

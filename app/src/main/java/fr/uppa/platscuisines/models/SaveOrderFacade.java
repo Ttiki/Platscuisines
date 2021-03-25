@@ -68,15 +68,14 @@ public class SaveOrderFacade extends Observable {
     }
 
     public void sendOrder(Context context){
-
-    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
         File path = new File(context.getFilesDir(), "temp");
         File file = new File(path, ORDER_FILE_NAME);
-        Uri csvFile = FileProvider.getUriForFile(context, "fr.uppa.platscuisines.models", file);
+        Uri csvFile = FileProvider.getUriForFile(context, "fr.uppa.platscuisines", file);
         sharingIntent.setType("text/comma-separated-values");
         sharingIntent.putExtra(Intent.EXTRA_STREAM, csvFile);
         sharingIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         sharingIntent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        context.startActivity(Intent.createChooser(sharingIntent, "Partager la commande avec..."));
+        context.startActivity(Intent.createChooser(sharingIntent,"Partager la commande avec..."));
     }
 }

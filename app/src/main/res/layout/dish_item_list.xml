@@ -126,24 +126,13 @@ android:orientation="vertical">
         android:layout_width="64dp"
         android:layout_height="18dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="@string/more_info"
         android:textAlignment="center"
         android:textColor="#2196F3"
         card_view:layout_constraintStart_toEndOf="@+id/addDishAction"
         card_view:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/sendOrder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:clickable="true"
-        android:onClick="sendOrder"
-        card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:srcCompat="@android:drawable/ic_menu_send" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
     </androidx.cardview.widget.CardView>
