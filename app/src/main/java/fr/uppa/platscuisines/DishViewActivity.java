@@ -77,8 +77,8 @@ public class DishViewActivity extends AppCompatActivity implements Observer {
             toast.show();
             return;
         }
-        saveOrderFacade.saveOrder(getApplicationContext());
-        saveOrderFacade.sendOrder(getApplicationContext());
+        saveOrderFacade.saveOrder(this);
+        saveOrderFacade.sendOrder(this);
         saveOrderFacade.clearOrder();
     }
 
